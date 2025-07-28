@@ -1,0 +1,9 @@
+def find_delayed_arrival_time(arrival_time, delayed_time):
+    return (arrival_time + delayed_time) % 24
+
+# Example usage
+arrival = int(input("Enter arrival time (0-23): "))
+delay = int(input("Enter delayed time (in hours): "))
+
+new_time = find_delayed_arrival_time(arrival, delay)
+print("New arrival time is:", new_time)
