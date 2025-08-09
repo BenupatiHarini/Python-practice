@@ -1,0 +1,18 @@
+def removeElement(nums, val):
+    k = 0  # index for placing non-val elements
+    
+    for i in range(len(nums)):
+        if nums[i] != val:
+            nums[k] = nums[i]
+            k += 1
+    return k
+
+
+# Example usage
+if __name__ == "__main__":
+    nums = [0, 1, 2, 2, 3, 0, 4, 2]
+    val = 2
+    print("Original array:", nums)
+    k = removeElement(nums, val)
+    print("k =", k)
+    print("Modified array:", nums[:k])  # Only first k elements matter
